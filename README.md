@@ -1,4 +1,6 @@
-# Connecting between bylink with client side
+# Connecting between blynk with client side
+
+#### \* bylink --> blynk
 
 :fire: :fire: :fire:
 
