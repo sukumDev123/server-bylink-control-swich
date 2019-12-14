@@ -1,8 +1,8 @@
-const collectionDb = db => db.collection("SWITCH_INFORMATION");
+const collectionSwitchInformationDb = db => db.collection("SWITCH_INFORMATION");
 exports.updateTimeOpenOfSwitch = (db, switch_is, status) =>
   new Promise((res, rej) => {
     try {
-      collectionDb(db)
+      collectionSwitchInformationDb(db)
         .doc(switch_is)
         .set({
           name_switch: switch_is,
@@ -16,19 +16,5 @@ exports.updateTimeOpenOfSwitch = (db, switch_is, status) =>
     }
   });
 
-// exports.getInformationOfSwitch = (db, switch_is) => {
-//   new Promise((res, rej) => {
-//     collectionDb(db)
-//       .doc(switch_is)
-//       .get()
-//       .then(snapshot => {
-//         console.log({ snapshot });
-//         // snapshot.forEach(doc => {
-//         //   console.log(doc.id, "=>", doc.data());
-//         // });
-//       });
-//   });
-// };
-
-exports.getAllInformationOfSwitch = db => collectionDb(db).get();
-// exports.addSwitchNewSwitch = db => new Promise((res, rej) => {});
+exports.getAllInformationOfSwitch = db =>
+  collectionSwitchInformationDb(db).get();
