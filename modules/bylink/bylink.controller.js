@@ -21,3 +21,21 @@ exports.handlePostBylink = async function handlePostBylink(req, res) {
     res.json(error);
   }
 };
+
+exports.getProfileBy = async function getProfileBy(req, res) {
+  try {
+    const handleGetProfile = await byLink.getProfile();
+    res.json(handleGetProfile);
+  } catch (error) {
+    res.json(error);
+  }
+};
+
+exports.getHistoryBy = async function getHistoryBy(req, res) {
+  try {
+    const getHistoryData = await byLink.getHistory(req.query.pinKey);
+    res.json(getHistoryData);
+  } catch (error) {
+    res.json(error);
+  }
+};
