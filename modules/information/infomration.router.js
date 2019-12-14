@@ -6,5 +6,7 @@ exports.informationRouter = router => {
     "/getAll",
     informationCOntroller.getAllInfomrationOfSwitchController
   );
+
+  router.get("/getPinsValueAll", informationCOntroller.getAllPinsValue);
   return router;
 };

@@ -22,6 +22,6 @@ function getUpdateDataGrahpEveryTimeSet(time) {
 
 http.createServer(app.expressSerive()).listen(port, () => {
   firebase.initFirebase();
-  getUpdateDataGrahpEveryTimeSet(5000);
+  // getUpdateDataGrahpEveryTimeSet(5000);
   console.log(`Listening port ${port}`);
 });
